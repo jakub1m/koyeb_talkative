@@ -4,7 +4,7 @@ import asyncio
 
 app = Flask(__name__)
 
-GEMINI_API_KEY = 
+GEMINI_API_KEY = os.getenv("Api_key", "")
 gemini_api = GeminiApi(api_key=GEMINI_API_KEY)
 
 @app.route('/text_conversation', methods=['POST'])
